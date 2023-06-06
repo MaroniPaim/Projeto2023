@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<title>Cadastros</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
+
+
+<style>
+  body {
+    text-align: center;
+  }
+
+  .item1 {
+    grid-area: header;
+  }
+
+  .item3 {
+    grid-area: c1;
+  }
+
+  .item4 {
+    grid-area: c2;
+    
+  }
+
+
+  .item5 {
+    grid-area: footer;
+  }
+
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .grid-container {
+    justify-items: center;
+    display: grid;
+    grid-template-areas:
+      'header header'
+      'c1 c2'
+      'footer footer ';
+    background-color: #014e8b;
+    padding: 100px;
+  }
+
+  .w3-black, .w3-hover-black:hover {
+  color: #fff !important;
+  background-color: #ff9933 !important;
+}
+</style>
+
+<body>
+
+  <div class="w3-container">
+    <h2>Cadastros</h2>
+    <p>Seja bem vindo ao sistema de cadastros.</p>
+  </div>
+  <div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button" onclick="openCity('London')">Alunos</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Professores</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Curso</button>
+    <button class="w3-bar-item w3-button" onclick="openCity('Moscou')">Turma</button>
+  </div>
+  <div id="London" class="w3-container city">
+  
+    <div class="grid-container">
+      <div class="title item1">Cadastro de Alunos<br><br></div>
+      <div class="item3">
+        <div class="input-container ic2">
+          <input id="firstname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="firstname" class="placeholder">Nome</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="lastname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="lastname" class="placeholder">CPF</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut "></div>
+          <label for="email" class="placeholder">Senha</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut "></div>
+          <label for="email" class="placeholder">Sexo</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut "></div>
+          <label for="email" class="placeholder">Nacionalidade</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut "></div>
+          <label for="email" class="placeholder">Idade</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut "></div>
+          <label for="email" class="placeholder">CEP</label>
+        </div>
+      
+      <div class="input-container ic2">
+        <input id="email" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="email" class="placeholder">Rua</label>
+      </div>
+    </div>
+      <div class="item4">
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut "></div>
+          <label for="email" class="placeholder">Numero</label>
+        </div>
+
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut "></div>
+          <label for="email" class="placeholder">Complemento</label>
+        </div>
+
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut "></div>
+          <label for="email" class="placeholder">Bairro</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut "></div>
+          <label for="email" class="placeholder">Cidade</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut "></div>
+          <label for="email" class="placeholder">Estado</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut "></div>
+          <label for="email" class="placeholder">DDD</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut "></div>
+          <label for="email" class="placeholder">Telefone</label>
+        </div>
+      </div>
+    
+    <div class="item5">
+      <button type="text" class="submit">Cadastrar</button>
+    </div>
+  </div>
+  </div>
+
+
+  </div>
+
+<!-- --------------------------------------------Professores --------------------------------------------- -->
+
+
+  <div id="Paris" class="w3-container city" style="display:none">
+    <div class="grid-container">
+      <div class="title item1">Cadastro de Professores<br><br></div>
+      <div class="item3">
+        <div class="input-container ic2">
+          <input id="firstname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="firstname" class="placeholder">Nome</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="lastname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="lastname" class="placeholder">CPF</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut "></div>
+          <label for="email" class="placeholder">Senha</label>
+        </div>
+        
+    
+    <div class="item5">
+      <button type="text" class="submit">Cadastrar</button>
+    </div>
+  </div>
+  </div>
+  </div>
+
+ 
+<!-- -----------------------------Cursos------------------------------------------------------- -->
+
+  <div id="Tokyo" class="w3-container city" style="display:none">
+    <div class="grid-container">
+      <div class="title item1">Cadastro de Cursos<br><br></div>
+      <div class="item3">
+        <div class="input-container ic2">
+          <input id="firstname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="firstname" class="placeholder">Nome do curso</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="lastname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="lastname" class="placeholder">Carga Horaria</label>
+        </div>
+        
+    
+    <div class="item5">
+      <button type="text" class="submit">Cadastrar</button>
+    </div>
+  </div>
+  </div>
+  </div>
+ 
+
+  <!-- ------------------------------Turmas------------------------------------------------------ -->
+
+ 
+  <div id="Moscou" class="w3-container city" style="display:none">
+    <div class="grid-container">
+      <div class="title item1">Cadastro de Turmas<br><br></div>
+      <div class="item3">
+        <div class="input-container ic2">
+          <input id="firstname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="firstname" class="placeholder">Aluno</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="lastname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="lastname" class="placeholder">Curso</label>
+        </div>
+       
+    <div class="item5">
+      <button type="text" class="submit">Cadastrar</button>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <script>
+    function openCity(cityName) {
+      var i;
+      var x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      document.getElementById(cityName).style.display = "block";
+    }
+  </script>
+
+</body>
+
+</html>
