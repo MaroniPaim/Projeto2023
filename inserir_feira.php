@@ -38,3 +38,31 @@ try {
 catch (PDOException $e) {
     echo 'Error: ' . $e->getMessage();
 }
+$stmt = $pdo->prepare('SELECT * FROM feiras ORDER BY ID_feira DESC LIMIT 1');
+$stmt->execute();
+
+if ($stmt->rowCount() > 0) {
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // Agora você pode usar os valores de $row para exibir a última linha da tabela
+    $idFeira = $row['ID_feira'];
+    $nomeFeira = $row['Nome_feira'];
+    $local = $row['Lugar'];
+    $dataInicio = $row['Data_inicio'];
+    $dataFim = $row['Data_fim'];
+
+    // Faça o que for necessário com os valores da última linha da tabela
+}
+$response = array(
+    'ID_feira' => $idFeira,
+    'Nome_feira' => $nomeFeira,
+    'Lugar' => $local,
+    'Data_inicio' => $dataInicio,
+    'Data_fim' => $dataFim
+);
+
+// Define o cabeçalho da resposta como JSON
+header('Content-Type: application/json');
+
+// Converte o array em JSON e imprime a resposta
+echo json_encode($response);
